@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="p-4 mt-6 bg-white sm:p-6 border border-t-4">
+    <footer className="animate__animated animate__zoomInDown p-4 mt-6 bg-white sm:p-6 border border-t-4">
       <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -12,22 +12,22 @@ const Footer = () => {
               target="_blank"
               className="flex items-center"
             >
-              <img src={logo} className="mr-3 h-8" alt="AJIO Logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <img src={logo} className="mr-3 h-16" alt="AJIO Logo" />
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">
                 AJIO.com
               </span>
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-white-700 uppercase dark:text-black">
                 Category
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
+              <ul className="text-gray-600 dark:text-black-400">
                 <li className="mb-4">
                   <a
                     href="https://www.ajio.com/shop/menswear"
-                    className="hover:underline"
+                    className="hover:underline text-black-600"
                     target="_blank"
                   >
                     Men
@@ -36,7 +36,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://www.ajio.com/shop/women"
-                    className="hover:underline"
+                    className="hover:underline text-black-600"
                     target="_blank"
                   >
                     Women
@@ -45,14 +45,14 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold  uppercase dark:text-black">
                 Follow us
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
+              <ul className="text-gray-600 dark:text-black-900">
                 <li className="mb-4">
                   <a
                     href="https://www.instagram.com/ajiolife"
-                    className="hover:underline "
+                    className="hover:underline text-black-600"
                   >
                     Instagram
                   </a>
@@ -69,10 +69,10 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Connect with us
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
+              <ul className=" dark:text-black-600">
                 <li className="mb-4">
                   <a
                     href="https://www.ajio.com/selfcare"
@@ -96,16 +96,13 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-black-500 sm:text-center dark:text-black-900">
             © 2024{" "}
             <a href="https://ajio.com" className="hover:underline">
               AJIO.com™
             </a>
             All Rights Reserved.
-            <p>
-              Made with ❤️ By @Team Edge AI Interns under mentorship of Pethuru
-              Raj and Divesh Kumar
-            </p>
+            <p>Made with ❤️ By @Team Edge AI</p>
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a

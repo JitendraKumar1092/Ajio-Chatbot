@@ -4,18 +4,22 @@ import { Link } from "react-router-dom";
 import Loader from "../assets/Loader";
 import logo from "../assets/logo.png";
 import Card from "../Components/Card";
+import TypeWriter from "../Components/TypewriterText";
 
 const FashionGpt = () => {
   const [inputText, setInputText] = useState("");
   const [responseData, setResponseData] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const handleChange = (event) => {
+    setInputText(event.target.value);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); // Set loading to true when data fetching starts
     try {
       const response = await fetch(
-        "https://ajio-gpt.vercel.app/api/products/pants",
+        "https://ajio-gpt.vercel.app/api/products/swimsuit",
         {
           method: "GET",
           headers: {
@@ -38,7 +42,7 @@ const FashionGpt = () => {
   return (
     <>
       {" "}
-      <header className="flex justify-around items-center bg-[#1c1c1c] p-4 text-white border-b border-gray-800">
+      <header className="flex justify-around items-center bg-white p-4 text-white border-b border-gray-800">
         <Link to="/">
           <img
             src={logo}
@@ -69,23 +73,23 @@ const FashionGpt = () => {
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.ajio.com/"
-          className="cursor-pointer inline-flex items-center rounded-full px-9 py-3 text-xl font-mono font-semibold text-white-500 hover:text-white border-2 border-white-600 hover:bg-cyan-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-cyan-600 duration-300  focus:bg-transparent"
+          className="cursor-pointer inline-flex bg-black items-center rounded-full px-9 py-3 text-xl font-mono font-semibold text-white-500 hover:text-white border-2 border-white-600 hover:bg-cyan-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-cyan-600 duration-300  focus:bg-transparent"
         >
           AJIO.com
         </a>
       </header>
       <section className="max-w-7xl mx-auto bg-[#14141r] md:p-5 rounded-lg shadow-md mt-5 from-neutral-200 to-neutral-800 bg-clip-text">
         <div>
-          <h1 className="mt-4 font-heading text-4xl font-bold animate-in slide-in-from-bottom-1/2 zoom-in-50 text-center text-white bg-clip-text bg-gradient-to-br from-foreground to-gray-500 dark:[text-shadow:none] md:text-5xl lg:text-6xl xl:text-7xl duration-500 fade-in-2">
+          <h1 className="mt-4 font-heading text-4xl font-bold animate-in slide-in-from-bottom-1/2 zoom-in-50 text-center text-black bg-clip-text bg-gradient-to-br from-foreground to-gray-500 dark:[text-shadow:none] md:text-5xl lg:text-6xl xl:text-7xl duration-500 fade-in-2">
             AJIO FashionGPT
           </h1>
           <p className="text-xs text-right text-gray-500 mr-4">
             Powered by Mistral-AI
           </p>
         </div>
-        <p className="mt-6 font-medium md:max-w-lg text-center mx-auto mt-3 text-gray-400 md:text-lg animate-in duration-500 zoom-in-50 fade-in-0">
+        <p className="mt-6 font-medium md:max-w-lg text-center mx-auto mt-3 text-black-400 md:text-lg animate-in duration-500 zoom-in-50 fade-in-0">
           Empowering Your Style Evolution: AJIO Fashion GPT - Your Personalized
-          Fashion Companion{" "}
+          Fashion Companion by{" "}
           <a
             href="https://ajio.com"
             className="text-blue-500"
@@ -101,14 +105,17 @@ const FashionGpt = () => {
           <label htmlFor="query">Ask your questions here</label>
           <form onSubmit={handleSubmit} className="flex items-center">
             <input
-              className="bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-2 shadow-md focus:shadow-lg focus:shadow-rose-400 dark:shadow-md dark:shadow-purple-500"
+              className="h-14 w-80 bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-2 shadow-md focus:shadow-lg focus:shadow-rose-400 dark:shadow-md dark:shadow-purple-500"
               autoComplete="off"
               placeholder="Enter your query"
               name="text"
               type="text"
+              required
+              value={inputText}
+              onChange={handleChange}
             />
 
-            <button className="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white">
+            <button className="ml-6 h-13 hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white">
               Submit
             </button>
           </form>
@@ -117,20 +124,8 @@ const FashionGpt = () => {
           {responseData.length > 0 ? (
             <div>{/* Display response data */}</div>
           ) : (
-            <div>
-              <iframe
-                src="https://giphy.com/embed/QBd2kLB5qDmysEXre9"
-                width="480"
-                height="288"
-                frameBorder="0"
-                className="giphy-embed"
-                allowFullScreen
-              ></iframe>
-              <p>
-                <a href="https://giphy.com/gifs/time-mr-bean-look-at-the-QBd2kLB5qDmysEXre9">
-                  Fashion GPT is waiting for your queries.
-                </a>
-              </p>
+            <div className="mb-8 mt-8 ">
+              <TypeWriter />
             </div>
           )}
         </div>

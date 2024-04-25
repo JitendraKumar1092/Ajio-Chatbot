@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import logo from "./assets/logo.png";
 import FashionGpt from "./Pages/FashionGpt";
 import Footer from "./Components/Footer";
+import "animate.css";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <header className="flex justify-around items-center bg-[#1c1c1c] p-4 text-white border-b border-gray-800">
+                <header className="animate__animated animate__zoomInDown flex justify-around items-center bg-white-700 p-4 text-white border-b border-gray-800">
                   <Link to="/">
                     <img
                       src={logo}
@@ -45,21 +46,21 @@ const App = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://www.ajio.com/"
-                    className="cursor-pointer inline-flex items-center rounded-full px-9 py-3 text-xl font-mono font-semibold text-white-500 hover:text-white border-2 border-white-600 hover:bg-cyan-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-cyan-600 duration-300  focus:bg-transparent"
+                    className="cursor-pointer bg-black inline-flex items-center rounded-full px-9 py-3 text-xl font-mono font-semibold text-white-500 hover:text-white border-2 border-white-600 hover:bg-cyan-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-cyan-600 duration-300  focus:bg-transparent"
                   >
                     AJIO.com
                   </a>
                 </header>
                 <section className="max-w-7xl mx-auto bg-[#14141r] md:p-5 rounded-lg shadow-md mt-5 from-neutral-200 to-neutral-800 bg-clip-text">
                   <div>
-                    <h1 className="mt-4 font-heading text-4xl font-bold animate-in slide-in-from-bottom-1/2 zoom-in-50 text-center text-white bg-clip-text bg-gradient-to-br from-foreground to-gray-500 dark:[text-shadow:none] md:text-5xl lg:text-6xl xl:text-7xl duration-500 fade-in-2">
+                    <h1 className="animate__animated animate__zoomInDown mt-4 font-heading text-4xl font-bold animate-in slide-in-from-bottom-1/2 zoom-in-50 text-center text-black bg-clip-text bg-gradient-to-br from-foreground to-gray-500 dark:[text-shadow:none] md:text-5xl lg:text-6xl xl:text-7xl duration-500 fade-in-2">
                       Welcome to Fashion GPT
                     </h1>
-                    <p className="text-xs text-right text-gray-500 mr-4">
+                    <p className=" animate__animated animate__zoomInDown text-xs text-right text-gray-800 mr-4">
                       Powered by Mistral-AI
                     </p>
                   </div>
-                  <p className="mt-6 font-medium md:max-w-lg text-center mx-auto mt-3 text-gray-400 md:text-lg animate-in duration-500 zoom-in-50 fade-in-0">
+                  <p className="animate__animated animate__zoomInDown mt-6 font-medium md:max-w-lg text-center mx-auto mt-3 text-black-700 md:text-lg animate-in duration-500 zoom-in-50 fade-in-0">
                     Discover the latest trends, styles, and inspirations in
                     fashion with our AI-powered assistant by{" "}
                     <a
@@ -72,22 +73,22 @@ const App = () => {
                     </a>
                   </p>
                 </section>
-                <h1 className="mt-6 text-2xl text-blue-400 w-full font-bold ml-40">
+                <h1 className="animate__animated animate__zoomInDown mt-6 text-2xl text-blue-700 w-full font-bold ml-40">
                   Try it now with these prompts:
                 </h1>
-                <section className="bg-[#14141r] text-blue-500 py-12 flex justify-evenly">
+                <section className="animate__animated animate__zoomInDown  bg-white  py-12 flex justify-evenly">
                   <div className="flex flex-col items-center ml -10">
-                    <ul className="text-gray-400 text-lg text-center">
-                      <li className="mb-2">
+                    <ul className="text-black-700 text-lg text-center">
+                      <li className="mb-2 text-black-700">
                         1. "I'm going to a party, what should I wear?"
                       </li>
-                      <li className="mb-2">
+                      <li className="mb-2 text-black-700">
                         2. "What should I buy for this Diwali season?"
                       </li>
-                      <li className="mb-2">
+                      <li className="mb-2 text-black-700">
                         3. "Any suggestions for a casual weekend outfit?"
                       </li>
-                      <li className="mb-2">
+                      <li className="mb-2 text-black-700">
                         4. "Help me find the perfect dress for my friend's
                         birthday."
                       </li>
@@ -98,7 +99,9 @@ const App = () => {
                     className="cursor-pointer duration-200 hover:scale-125 active:scale-100"
                     title="Go Back"
                   >
-                    <p className="f">Excited!!! 🤩 ... Let's give it a try </p>
+                    <p className="animate__animated animate__zoomInDown text-black">
+                      Excited!!! ... Let's give it a try{" "}
+                    </p>
                     <div className="flex justify-end">
                       <div className="w-24 h-24 flex items-center justify-center bg-blue-500 rounded-full">
                         <svg
