@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import logo from "./assets/logo.png";
-import FashionGpt from "./Pages/FashionGpt";
+import TrendsAI from "./Pages/FashionGpt.jsx";
 import Footer from "./Components/Footer";
 import "animate.css";
 
@@ -10,7 +10,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/FashionGpt" element={<FashionGpt />} />
+          <Route path="/TrendsAI" element={<TrendsAI />} />
           <Route
             path="/"
             element={
@@ -95,7 +95,7 @@ const App = () => {
                     </ul>
                   </div>
                   <Link
-                    to="/FashionGpt"
+                    to="/TrendsAI"
                     className="cursor-pointer duration-200 hover:scale-125 active:scale-100"
                     title="Go Back"
                   >
