@@ -6,7 +6,7 @@ import logo from "../assets/logo.png";
 import Card from "../Components/Card";
 import TypeWriter from "../Components/TypewriterText";
 
-const FashionGpt = () => {
+const TrendsAI = () => {
   const [inputText, setInputText] = useState("");
   const [responseData, setResponseData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -81,14 +81,14 @@ const FashionGpt = () => {
       <section className="max-w-7xl mx-auto bg-[#14141r] md:p-5 rounded-lg shadow-md mt-5 from-neutral-200 to-neutral-800 bg-clip-text">
         <div>
           <h1 className="mt-4 font-heading text-4xl font-bold animate-in slide-in-from-bottom-1/2 zoom-in-50 text-center text-black bg-clip-text bg-gradient-to-br from-foreground to-gray-500 dark:[text-shadow:none] md:text-5xl lg:text-6xl xl:text-7xl duration-500 fade-in-2">
-            AJIO FashionGPT
+            AJIO's Trends AI
           </h1>
           <p className="text-xs text-right text-gray-500 mr-4">
             Powered by Mistral-AI
           </p>
         </div>
         <p className="mt-6 font-medium md:max-w-lg text-center mx-auto mt-3 text-black-400 md:text-lg animate-in duration-500 zoom-in-50 fade-in-0">
-          Empowering Your Style Evolution: AJIO Fashion GPT - Your Personalized
+          Empowering Your Style Evolution: AJIO Trends AI - Your Personalized
           Fashion Companion by{" "}
           <a
             href="https://ajio.com"
@@ -102,10 +102,10 @@ const FashionGpt = () => {
       </section>
       <div className="flex flex-col items-center">
         <div className="max-w-xl mx-auto p-4">
-          <label htmlFor="query">Ask your questions here</label>
+          
           <form onSubmit={handleSubmit} className="flex items-center">
             <input
-              className="h-14 w-80 bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-2 shadow-md focus:shadow-lg focus:shadow-rose-400 dark:shadow-md dark:shadow-purple-500"
+              className="h-14 w-80 bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-blue-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-2 shadow-md focus:shadow-lg focus:shadow-blue-400 dark:shadow-md dark:shadow-purple-500"
               autoComplete="off"
               placeholder="Enter your query"
               name="text"
@@ -142,4 +142,4 @@ const FashionGpt = () => {
   );
 };
 
-export default FashionGpt;
+export default TrendsAI;
