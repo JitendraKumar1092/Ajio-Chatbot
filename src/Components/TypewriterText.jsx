@@ -30,7 +30,7 @@ const TypewriterApp = () => {
   }, [currentIndex, currentText, sentences]);
 
   return (
-    <div className="flex justify-center items-center h-40 w-screen bg-white border boder-1-black">
+    <div className="flex justify-center items-center h-40 w-screen bg-white  boder-1-black">
       <div className="w-1/2 bg-white-800 rounded-lg p-8 text-center text-black">
         <p className="text-gray-400 font-medium md:max-w-lg text-center mx-auto mt-3 text-lg text-cyan-600 ">
           What you can ask from me
